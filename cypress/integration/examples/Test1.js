@@ -10,6 +10,8 @@ describe('My First Test', () => {
     //Search for rc car
     cy.get('#twotabsearchtextbox').type("rc car")
     cy.get('#nav-search-submit-button').click()
+    //wait 2sec
+    cy.wait(2000)
     //for item is on the first promo products
     cy.get('._bGlmZ_item_awNhH').should('have.length',3)
   })
