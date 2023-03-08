@@ -6,13 +6,15 @@ describe('My First Test', () => {
     cy.visit("https://www.amazon.co.uk/");
     //fixture
     //Accept Button
-    cy.get("#a-autoid-0").click()
+    cy.get("#a-autoid-0").click();
     //Search for rc car
-    cy.get('#twotabsearchtextbox').type("rc car")
-    cy.get('#nav-search-submit-button').click()
+    cy.get('#twotabsearchtextbox').type("rc car");
+    cy.get('#nav-search-submit-button').click();
     //wait 2sec
-    cy.wait(2000)
+   // cy.wait(2000);
     //for item is on the first promo products
-    cy.get('.sg-col-inner').should('have.length',96)
+    cy.get('.sg-col-inner').should('have.length',96);
+    cy.request('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+
   })
 })
