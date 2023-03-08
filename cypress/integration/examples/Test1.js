@@ -11,9 +11,10 @@ describe('My First Test', () => {
     cy.get('#twotabsearchtextbox').type("rc car");
     cy.get('#nav-search-submit-button').click();
     //wait 2sec
-   // cy.wait(2000);
+    //cy.wait(2000);
     //for item is on the first promo products
-    cy.get('.sg-col-inner').should('have.length',96);
+    //cy.get('.sg-col-inner').should('have.length',96);
+    cy.get('.s-result-list').should('exist').find('.s-result-item').should('have.length', 48);
     cy.request('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
 
   })
