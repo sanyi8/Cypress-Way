@@ -13,6 +13,6 @@ describe('My First Test', () => {
     //wait 2sec
     cy.wait(2000)
     //for item is on the first promo products
-    cy.get('._bGlmZ_item_awNhH').should('have.length',3)
+    cy.get('.sg-col-inner').should('have.length',96)
   })
 })
