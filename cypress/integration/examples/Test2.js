@@ -1,16 +1,25 @@
 /// <reference types="Cypress" />
 
-describe('My First Test2', () => {
-  it('My first test2 case', () => {
-    
-    cy.visit("https://courses.rahulshettyacademy.com/courses");
-    //fixture
-    //go to search bar on the page
-    cy.get("#search-courses").type("all{enter}")
-    //wait 2sec
-    cy.wait(2000)
-    //for item is on the first promo products
-    cy.get('.course-list').should('have.length',2)
+describe("My Second Test Suite", function () {});
+it("My FirstTest case", function () {
+  cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
+  cy.get(".search-keyword").type("ca");
+  cy.wait(2000);
 
-  })
-})
+  //Parent child chaining
+  cy.get(".products").as("productLocator");
+  cy.get("@productLocator")
+    .find(".product")
+    .each(($el, index, $list) => {
+      const textVeg = $el.find("h4.product-name").text();
+      if (textVeg.includes("Cashews")) {
+        $el.find("button").click();
+      }
+    });
+cy.get('.cart-icon > img').click();
+// click on the cart drop down button 
+cy.contains('PROCEED TO CHECKOUT').click();
+cy.get(':nth-child(14)').click()
+cy.get('select')
+
+});
