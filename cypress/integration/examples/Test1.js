@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+const { find } = require("cypress/types/lodash");
+
 describe('My First Test', () => {
   it('My first test case', () => {
     
@@ -16,6 +18,7 @@ describe('My First Test', () => {
     //cy.get('.sg-col-inner').should('have.length',96);
     cy.get('.s-result-list').should('exist').find('.s-result-item').should('have.length', 48);
     cy.request('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+    //cy.get('.products')find('.product').shoould('have.lenght',4)
 
   })
 })
