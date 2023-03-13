@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe("My Third test case", function () {
   it("My third test case", function () {
     //checkbox
@@ -38,6 +40,8 @@ describe("My Third test case", function () {
     //radio buttons to get checked
     //cy.get('[for="radio2"] > .radioButton') from this to bellow
     cy.get('[value="radio2"]').check().should('be.checked')
+
+    //Handle ALERT and Confirm (Cypress auto accepts)
 
 
 
