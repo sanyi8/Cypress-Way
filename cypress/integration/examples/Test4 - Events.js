@@ -27,12 +27,17 @@ expect(str).to.equal('Hello , Are you sure you want to confirm?')
   
 })
 
-// not support child windows
+// not support child windows for TAB
 
 cy.get('#opentab').invoke('removeAttr','target').click()
+
+// go - Use it for get back on "TAB"
+// get back because Cypress handles tabs in the same window
  
- 
- 
+cy.go('back')
+
+//check if you get back to the right page
+cy.url().should('include','rahulshettyacademy')
  
  
  
