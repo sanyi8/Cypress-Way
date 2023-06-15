@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 
+
 describe("Tab Frames and child windows", function () {
   it("My forth case", function () {
     //Check boxes
