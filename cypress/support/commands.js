@@ -25,11 +25,11 @@ Cypress.Commands.add("selectProduct", (productName) => {
 
 })
 
-Cypress.Commands.add("LoginAPI",()=> {
+Cypress.Commands.add("LoginAPI",()=> {  //create a custom command for login
     cy.request("POST","https://rahulshettyacademy.com/api/ecom/auth/login", {"userEmail":"sanyitelo@gmail.com","userPassword":"x3m*YP^$xL&U#hNs"}).then(function(response)
     {
-        expect(response.status).to.eq(200)
-        Cypress.env("token",response.body.token); //token available everywhere 
+        expect(response.status).to.eq(200)  //assertion 200
+        Cypress.env('token', response.body.token); //token available everywhere 
     })
 
 
