@@ -26,15 +26,19 @@ describe('JWT Session', () => {
                 cy.wrap($el).click()
 
             }
-        })
+        });
         
         // wait only here as Rahul server slow DO NOT USE IN REAL
+        cy.wait(800)
         // chose India button which is the 3rd it should be by above I loop
-        cy.wait(800);
-        cy.get('.ta-results > :nth-child(3)').click()
+        cy.get('.ta-results > :nth-child(3)').click();
         cy.get(".action__submit").click();
-        
+        cy.wait(800)
+        // cy.get(".mb-3gx-spinner-overlay").click();
+        // cy.get('[data-top="343.59375"]').click()
+
+        cy.contains("Click To Download Order Details in CSV").click()
+        });
 
 
-    })
-})
+    });
