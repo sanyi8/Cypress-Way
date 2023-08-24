@@ -37,8 +37,7 @@ describe('JWT Session', () => {
         // cy.get(".mb-3gx-spinner-overlay").click();
         // cy.get('[data-top="343.59375"]').click()
 
-        cy.contains("Click To Download Order Details in CSV").click()
+        cy.contains("CSV").click()
         });
-
 
     });
